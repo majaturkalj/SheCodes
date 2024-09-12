@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes Final Project</title>
+    <style>
+        body{
+            background:#fef2f2;
+        }
+
+        .head-one{
+            text-align: center;
+            font-size: 36px;
+            font-weight:bolder;
+            color:#4d1212;
+            border: 1px solid #4d1212;
+            border-radius: 4px;
+            padding: 10px;
+
+        }
+
+        .head-two{
+            text-align: center;
+            color:#4d1212;
+        }
+
+        .container{
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 25px;
+            background-color:#fee2e2;
+            border: 5px solid #7f1d1d;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+            font-family:Verdana;
+        }
+
+        .SDG{
+            font-weight: bold;
+            font-style: oblique;
+        }
+
+        p{
+            line-height: 150%;
+        }
+
+        a{
+            display:block;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 22px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color:#4d1212;
+        }
+
+        a:hover{            
+            text-decoration: underline;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+
+        button{
+            display:block;
+            margin: 0 auto;
+            background:#7f1d1d;
+            color:#fef2f2;
+            font-size:15px;
+            font-weight:bold;
+            padding:15px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+            transition: width 2s;
+
+        }
+
+        button:hover{
+            opacity:0.9;
+            cursor:pointer;
+            width: 15%;
+
+        }
+
+        footer{
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom:20px;
+            background: linear-gradient(#fecaca, #fee2e2);
+        }
+
+        img{
+            display:block;
+            margin: 0 auto;
+            max-width: 95%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1 class="head-one"> <small>🌍</small> Mappers Wanted <small>🌍</small> </h1>
+    <h2 class="head-two"> <small>🌐</small> Happy Mapping! <small>🌐</small> </h2>
+    <hr/>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/142/990/original/mapping.jpg?1726055343"
+    alt="Reaching those in need through maps" title="Reaching those in need through maps" width="" />
+    <hr/>
+    <p><strong>HOT</strong> is an international team dedicated to humanitarian action and community development through open mapping. We work
+    together to provide map data which revolutionises disaster management, reduces risks, and contributes to achievement of
+    the <span class="SDG">Sustainable Development Goals.</span></p>
+    <a href="https://www.hotosm.org/" target="_blank" title="Read more">More About Us</a>
+    <br/>
+    <button>JOIN US</button>
+    <br/>
+    <footer>Coded by <em>Maja Turkalj</em></footer>
+    </div>
+    <script>
+        function join(){
+            let name = prompt("What is your name?");
+            let age = prompt("What is your age?");
+            let email = prompt("What is your email?")
+
+            if (age >= 18) {
+                alert("Hi " + name + "! Welcome to our mapping team! We will contact you with more instructions on your " + email + " email. Please check your spam folder also.");
+            } else {
+                alert("Sorry, " + name + "! You have to be 18 years old to join our mapping team. There are other way to help and we will contact you with more instructions on your " + email + " email. Please check your spam folder also.");
+            }
+        }
+
+        let joinUs = document.querySelector("button");
+        joinUs.addEventListener("click", join);
+
+    </script>
+</body>
+</html>
