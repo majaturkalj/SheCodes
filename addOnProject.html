@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading - My Hobby 📚 </title>
+    <style>
+        body {
+            background: rgb(233, 233, 238);
+        }
+
+        h1 {
+            text-align:center;
+        }
+
+        h2 {
+            text-align:center;
+        }
+
+        .container {
+            max-width:600px;
+            margin: 20px auto;
+            background: whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width:100%;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            border: 5px solid rgb(233, 233, 238);
+            border-radius: 3px;
+            background: white;
+            font-size: 20px;
+            padding: 5px;
+            transition: all 150ms ease-in-out;
+        }
+
+        button:hover{
+            background: rgb(233, 233, 238);
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 17px;
+        }
+
+        .theme-button {
+            display: block;
+            margin: 0 auto;
+            border: 5px solid rgb(91, 91, 94);
+            border-radius: 3px;
+            background: white;
+            font-size: 20px;
+            padding: 5px;
+            transition: all 150ms ease-in-out;
+        }
+
+      .theme-button:hover {
+            background: rgb(91, 91, 94);
+            cursor: pointer;
+        }
+
+        .intro-picture {
+            border-radius:10px;
+            transition: 150ms ease-in-out;
+        }
+
+        .intro-picture:hover {
+            filter: contrast(80%);
+            transform: scale(1.2);
+        }
+
+        .other-pictures {
+            border-radius:10px;
+            transition: 150ms ease-in-out;
+        }
+
+        .other-pictures:hover {
+            filter: contrast(80%);
+            transform: scale(1.15);
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.2;
+        }
+
+        .grid {
+            margin: 10px 0;
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .grid img {
+            width: 100%;
+        }
+
+        .dark {
+            background: rgb(143, 143, 143);
+        }
+
+        .dark .container{
+            background: rgb(238, 234, 234);
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <button class="theme-button">Change Theme</button>
+
+    <div class="container">
+    <h1>Importance of reading</h1>
+    <h2>A room without books is like a body without a soul</h2>
+    <a href="https://zwingliusredivivus.wordpress.com/2024/01/04/wisdom-from-umberto-eco-on-books-and-the-buying-of-them/" target="_blank">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/210/original/01_books.jpg?1734692482" alt="Books" title="Books" 
+    class="intro-picture"/>
+    </a>
+    <div class="grid">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/211/original/02_books.jpg?1734692499" alt="Books" title="Books" 
+    class="other-pictures"/>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/212/original/03_books.jpg?1734692514" alt="Books" title="Books" 
+    class="other-pictures"/>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/213/original/04_books.jpg?1734692525" alt="Books" title="Books" 
+    class="other-pictures"/>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/283/original/05_books.jpg?1734873034" alt="Books" title="Books" height="200px"
+    class="other-pictures"/>
+    </div>
+
+    <p>As you read a book word by word and page by page, you participate in its creation, just as a cellist playing a Bach
+    suite participates, note by note, in the creation, the coming-to-be, the existence, of the music. And, as you read and
+    re-read, the book of course participates in the creation of you, your thoughts and feelings, the size and temper of your
+    soul.
+    <br /><br />
+    📖
+    <a href="https://www.bbc.co.uk/teach/articles/zmbtwty">
+    <strong> Benefits of reading </strong>
+    </a>
+    </p>
+
+
+    <button>Read Books!</button>
+    </div>
+
+    <footer>Coded by <strong>Maja Turkalj</strong></footer>
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+
+            // body.classList.toggle("dark"); (this is second solution instead if)
+
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+            } else {
+                body.classList.add("dark");
+            }
+        }
+
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener('click', changeTheme);
+    </script>
+</body>
+
+</html>
